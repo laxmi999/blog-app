@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Laxmi's Blogs | <%= title %></title>
-</head>
+<%- include('./partials/head.ejs') %>
 
 <body>
 
   <%- include('./partials/nav.ejs') %>
-  
+
   <div class="blogs content">
     <h2>All Blogs</h2>
     <% if (blogs.length > 0) { %>
@@ -23,6 +19,8 @@
     <p>There are no blogs to display.</p>
     <% } %>
   </div>
+
+  <%- include('./partials/footer.ejs') %>
 </body>
 
 </html>
