@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blog_routes = require('./routes/blog_routes');
@@ -7,8 +8,7 @@ const blog_routes = require('./routes/blog_routes');
 const app = express();
 
 //connect to mongodb
-const dbURI =
-  'mongodb+srv://lonestar0825:mongodb@nodecourse.yugwvfs.mongodb.net/node-cousre?retryWrites=true&w=majority';
+const dbURI = process.env.DB_URI;
 
 mongoose
   .connect(dbURI)
